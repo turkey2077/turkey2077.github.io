@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        :root {
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --text-tertiary: #6b6b6b;
+            --background: #ffffff;
+            --accent: #2563eb;
+        }
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        /* 主容器 */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 0 2rem;
+        }
+        /* 主标题区域 */
+        .main-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+        }
+        /* 联系方式区域 */
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            transition: transform 0.3s;
+        }
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+        .contact-details {
+            flex: 1;
+        }
+        .contact-label {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        .contact-value {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        .contact-value a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-value a:hover {
+            color: var(--accent);
+        }
+        .email-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .email-item {
+            display: flex;
+            align-items: center;
+        }
+        .email-item:before {
+            content: "•";
+            margin-right: 0.5rem;
+            color: var(--text-tertiary);
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            body {
+                padding: 1rem;
+            }
+            
+            .contact-item {
+                padding: 0.25rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="main-title">
+            <h1>turkey1024</h1>
+            <p class="subtitle">上海初三生</p>
+        </section>
+        <section class="contact-section">
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <div class="contact-icon"></div>
+                    <div class="contact-details">
+                        <div class="contact-label">邮箱</div>
+                        <div class="contact-value">
+                            <div class="email-list">
+                                <div class="email-item">
+                                    <a href="mailto:admin@qxz.qzz.io">admin@qxz.qzz.io</a>
+                                </div>
+                                <div class="email-item">
+                                    <a href="mailto:admin@qqqz.qzz.io">admin@qqqz.qzz.io</a>
+                                </div>
+                                <div class="email-item">
+                                    <a href="mailto:admin@actually-ljx.is-not.cool">admin@actually-ljx.is-not.cool</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="contact-item">
+                    <div class="contact-icon"></div>
+                    <div class="contact-details">
+                        <div class="contact-label">微信号</div>
+                        <div class="contact-value">wxid_b6320udsdwdr22</div>
+                    </div>
+                </li>
+                <li class="contact-item">
+                    <div class="contact-icon"></div>
+                    <div class="contact-details">
+                        <div class="contact-label">GitHub</div>
+                        <div class="contact-value">
+                            <a href="https://github.com/turkey1024" target="_blank">github.com/turkey1024</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="contact-item">
+                    <div class="contact-icon"></div>
+                    <div class="contact-details">
+                        <div class="contact-label">导航站</div>
+                        <div class="contact-value">
+                            <a href="https://ljx.is-not.cool" target="_blank">ljx.is-not.cool</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('.contact-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.cursor = 'pointer';
+            });
+        });
+    </script>
+</body>
+</html>
